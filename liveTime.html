@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function getTime(){
+                var dt = new Date();
+                var s = dt.getSeconds();
+                var m = dt.getMinutes();
+                var h= dt.getHours();
+                s=checkTime(s);
+                m=checkTime(m);
+                 document.getElementById("lab").style.fontSize = '20';
+                document.getElementById("lab").style.color ="blue";
+                document.getElementById("lab").innerText=h + " : "+ m + " : " +s;
+                setTimeout(function (){
+                    getTime();
+                },1000);
+            }
+            function checkTime(d){
+                if(d< 10){
+                    d= "0"+d;
+                }
+                return d;
+            }
+        </script>
+    </head>
+    <body onload=" getTime()">
+            <label id ="lab"> </label>
+    </body>
+</html>
