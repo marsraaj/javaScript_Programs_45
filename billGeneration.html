@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function generateBill(){
+               
+                var price =parseInt(document.getElementById("second").value) * parseInt(document.getElementById("third").value);
+                
+                document.getElementById("forth").innerHTML=price;
+                document.getElementById("he").innerHTML= document.getElementById("first").value;
+                document.getElementById("he").style.color="violet";
+                var disc=0;
+                var final
+                if(price > 1000){
+                    disc = parseInt(price *0.1);
+                }
+                document.getElementById("fifth").innerHTML=disc;
+                document.getElementById("sixth").innerHTML= finprice -parseInt(disc);
+            }
+        </script>
+    </head>
+    <body>
+        <pre>
+        <form>
+            Enter product name :  <input type="text"  id="first"><br>
+            Enter product price : <input type="text"id="second" ><br>
+            Enter product quntity : <input type="text"id="third" ><br>
+            <input type ="button" onclick="generateBill()" value="Bill"><br>
+            Your Product Name<label id="he" name="ban"></label><br>
+            Your  bill :          <label id="forth" name="ban"></label><br>
+            Discount Amt     <label id="fifth" name="ban"></label><br>
+            final bill :           <label id="sixth" name="ban"></label>
+       </form>
+    </pre>
+    </body>
+</html>
