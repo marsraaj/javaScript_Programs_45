@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+        var inc=1;
+        var id=0;
+        var width =100;
+        function start(){
+            id=window.setInterval(increament,100);
+        }
+        function increament(){
+            document.getElementById("timer").style.color="red";
+            document.getElementById("timer").innerHTML = inc + " seconds";
+            inc++;
+            width =width + inc;
+            var obj =document.getElementById("mg");
+            obj.style.width= 300;
+        }
+        function stop(){
+            window.clearInterval(id);
+        }
+</script>
+</head>
+<body>
+        <button onclick=" start()">start</button>
+        <h3 id ="timer"> </h3>
+        <img src ="heart.jpg" width="100px" id="mg">
+        <button onclick="stop()">stop</button>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                    crossorigin="anonymous">
+        </script>
+</body>
+</html>
