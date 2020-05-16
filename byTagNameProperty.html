@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+        function byTagName(){
+            var para = document.getElementsByTagName("p");
+            para[0].style.color="red";
+            for(var i=0 ; i<para.length; i++){
+                para[i].style.fontFamily ="Cooper";
+            }
+        }
+        function byClassName(){
+            var crud = document.getElementsByClassName("myclass");
+           crud[0].innerHTML = "She left me , when i was at 21";
+            for(var i=0; i<crud.length; i++){
+               // crud[i].style.fontSize =60;
+                crud[i].style.color ="maroon";
+                crud[i].style.fontFamily="Poor Richard";
+            }
+        }
+        function getNewImg(){
+            var img = document.getElementsByTagName("img");
+            img[0].src="topsecret.png";
+        }
+        function getOldImg(){
+            var img =document.getElementsByTagName("img");
+            img[0].src ="secret.png";
+        }
+    </script>
+</head>
+<body>
+        
+        <p>Yestered night i travelled by train</p>
+        <p>I will complete my work by tomorrow</p>
+        <p>This letter has been written by mr Sharma</p>
+        <p>They missed bus by a minute</p>
+        <button onclick="byTagName()">clickMe</button>
+        <br>
+        <label class="myclass">He called me at 3:15</label>
+        <p class="myclass">They told me about their plan at divali</p>
+        <pre class="myclass">I am at cbs ST stand</pre>
+        <label class="myclass">Look at her, She is just amazing...!</label>
+        <button onmouseover="byClassName()">overMe</button><br>
+        <img src ="secret.png"  onmouseover="getNewImg()" onmouseout="getOldImg()"/>
+    </body>
+</html>
