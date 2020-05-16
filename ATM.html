@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var balance = 10000;
+        var code =parseInt(prompt(" 1 : balance Enquriry  2:Deposite  3:withdraw 4: enter 0 to exit. Enter your choice "));
+
+        switch(code){
+            case 1:
+                    document.writeln("<h2> Your balance is : " +balance +" </h2>");
+                break;
+    
+            case 2:
+                var amount =parseInt(prompt("Enter deposite Amount :"));
+                balance = balance+amount;
+                document.writeln("<h2> Your new balance is : " + balance +"</h2>");
+                break;
+
+            case 3:
+                 var amount =parseInt(prompt("Enter withDraw Amount :"));
+                 if(amount > balance){
+                     alert("Balance is not sufficient .........!");
+                 }
+                 else{
+                    balance = balance-amount;
+                    document.writeln("<h2> Your new balance is : " + balance +"</h2>")
+                 }
+                break;
+            case 4:
+                 
+            default:
+                document.writeln("<h2>Wrong selection ............!</h2>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
