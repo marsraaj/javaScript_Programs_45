@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+            //js events : - onclick, ondbclick, onfocus, onblur, onsubmit, onmouseover, onmouseout,onload,
+            // onkeypress, onkeyup, onkeydown, onreset, onresized,onscroll
+            function onclickEvent(){
+                alert("onclick Event occured....!");
+            }
+            function ondbclickEvent(){
+                alert("ondbclick Event Occured...!");
+            }
+            function onloadEvent(){
+                alert("onload evetn Occured...!");
+                document.getElementById("bd").style.backgroundColor='maroon';
+            }
+            function onmouseoutEvent(){
+
+                alert("onmouse OUt event Occured...!");
+                document.getElementById("lab2").style.fontFamily='Verdana';
+            }
+            function onmouseoverEvent(){
+                alert("onMouse over event Occured...");
+                document.getElementById("lab").style.color='red';
+            }
+            function onkeyupEvent(){
+                var password = document.getElementById("u").value;
+                if(password.length < 5){
+                    alert("weak password.....");
+                }
+                else    
+                    alert("May be strong password....");
+                alert("on key up event Occured...!");
+            }
+            function onkeydownEvent(){
+                alert ("on key down Event Occured...!");
+            }
+        </script>
+    </head>
+    <body onload ="onloadEvent()" id="bd">
+            <pre>
+                    <button onclick="onclickEvent()">onclick</button><br>
+                    <button ondblclick="ondbclickEvent()">dbclick</button><br>
+                    <label onmouseover="onmouseoverEvent()" id ="lab"> this is mouse over Event</label>
+                    <label onmouseout="onmouseoutEvent()" id="lab2"> this is mouse out event</label>
+                    <label>Enter password </label> <input type ="text" id="u" onkeyup = "onkeyupEvent()"> <label id ="status"></label>
+                </pre>
+    </body>
+</html>
