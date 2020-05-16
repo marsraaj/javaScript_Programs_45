@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+        function fn(){
+
+            emp={ id: 200, name:"mars" , age:23}
+            document.write("<h1>  Age of Employee : " +emp.age + " 		Name of Employee "+ emp.name + "  		Employee Id: " + emp.id);
+            
+            var obj = new Object();
+            obj.user = "srock";
+            obj.password = "Asd@$54";
+            document.write("<br><br> User name :  " +obj.user + "      Password  :   " + obj.password);
+
+          function product(price , quantity, name){
+              this.price = price;
+              this.quantity = quantity;
+              this.name = name;
+          }  
+          e = new product(4000000, 2, "Mercedes-Benz");
+          document.write("<br><br> Price of Vehicle  " + e.price + "   	Quantity   : "+  e.quantity + "   	Name of Vehicle  : "+ e.name );
+        }
+        </script>
+    </head>
+    <body  onload="fn()">
+
+    </body>
+</html>
