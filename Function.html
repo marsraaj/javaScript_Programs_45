@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            //advantages : code resusability, reduce code
+            //function with argument
+            function square(){
+                
+                var val= document.getElementById("v").value;
+                val =parseInt(val);
+                if(val < 0){
+                    alert("Invalid number..");
+                }
+				else{
+                val = val* val;
+                document.getElementById("value").innerHTML=val ;
+                //alert(num * num);
+				}
+            }
+        </script>
+    </head>
+    <body>
+        <label>Enter any positive value</label><input type="text" id="v">
+    <br></br><input type="submit"  name="Value" value="square" onclick="square()">
+        <br><br> <label id="value"></label>
+    </body>
+</html>
