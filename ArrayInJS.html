@@ -1,0 +1,41 @@
+<html>
+    <head>
+        
+        <script>
+           function arrayFun(){
+                var arrayList= [10,30,20,40,"mars"]; //create array using array literals
+                var css = "<center><strong>";
+                var css2 ="</strong></center></br>";
+                document.write(css+"Array Elements :  " +css2 );
+                for(var i=0; i<arrayList.length; i++){
+                    document.write(css+ arrayList[i]+css2); //display array elements
+                }
+           
+                var arrayStudent= new Array(); 			//create array using new keyword
+                arrayStudent[0]= "srock";
+                arrayStudent[1]= "Jonas";
+                arrayStudent[2]= "Ken";
+                arrayStudent[3]= "smith";
+                var j=0;
+               document.write(css+"Array Elements :  " +css2 );
+                for(var i=0; i<arrayStudent.length; i++){
+                    document.write(css+ arrayStudent[i]+css2);
+                }
+
+                var concate  = new Array();						// array function
+                concate= arrayStudent.concat(arrayList);
+                document.write(concate);
+                
+                arrayStudent.push("icepick");
+                document.write("<br>"+arrayStudent.reverse());
+                document.write("<br>"+arrayStudent.sort());
+           }
+        </script>
+
+    </head>
+    
+    <body onload="arrayFun()">
+
+    </body>
+
+</html>
